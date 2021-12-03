@@ -2,6 +2,7 @@ package avance.iv;
 
 public class datos
 {
+    //Atributos
     public String nombre;
     public String apellidos;
     public String mail;

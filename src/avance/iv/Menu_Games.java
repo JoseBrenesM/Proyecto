@@ -11,7 +11,8 @@ public class Menu_Games
         while(!salir){
         JOptionPane.showMessageDialog(null, "Bienvenido a nuestro menu principal, por favor selecciona una opcion");
             int Menu=Integer.parseInt(JOptionPane.showInputDialog("1.- Ver todos los juegos 2.- Comprar un juego 3.- Salir"));
-        switch (Menu){
+       //Switch para el Menu de Opciones
+            switch (Menu){
             
             case 1:
                 Archivos_Planos FIDE8= new Archivos_Planos();
