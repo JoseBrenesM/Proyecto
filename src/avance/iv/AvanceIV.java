@@ -24,7 +24,6 @@ public class AvanceIV
                 break;
             case 2:
                 Administracion FIDE2=new Administracion();
-                Facturacion FIDE1= new Facturacion();
                 break;
             case 3:
                 Atencion_Cliente FIDE5= new Atencion_Cliente();
