@@ -1,4 +1,4 @@
-package proyecto;
+package avance.iv;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -9,7 +9,7 @@ import java.util.Date;
 import javax.swing.JOptionPane;
 import static javax.swing.JOptionPane.showInputDialog;
 
-public class Buscar_Comprar extends listaJuegos
+public class Buscar_Comprar extends ListaJuegos
 {
 
     public int x;
