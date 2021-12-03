@@ -42,7 +42,7 @@ public class Administracion
                 }
                 break;
             case 2:
-                listaJuegos FIDE10=new listaJuegos();
+                ListaJuegos FIDE10=new ListaJuegos();
                 FIDE10.ListaJuegos();
                 FIDE10.Escribir("Administrar juegos.txt");
                 break;

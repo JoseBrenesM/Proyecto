@@ -23,7 +23,7 @@ public class AvanceIV
                 Menu_Games FIDE4=new Menu_Games();
                 break;
             case 2:
-                Carrito FIDE2=new Carrito();
+                Administracion FIDE2=new Administracion();
                 Facturacion FIDE1= new Facturacion();
                 break;
             case 3:
