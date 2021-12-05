@@ -10,29 +10,31 @@ import javax.swing.JOptionPane;
 
 public class AvanceIV 
 {
-
     public static void main(String[] args) 
     {
+        
         JOptionPane.showMessageDialog(null,"Bienvenido a Juegos506 ");
-        Inicio_Sesion FIDE= new Inicio_Sesion();
-        String seleccion= JOptionPane.showInputDialog("1.- Ver Inventario 2.- Ver Carrito 3.- Atencion al cliente 4.- Acerca de Nosotros");
+        Inicio_Sesion FIDE= new Inicio_Sesion();  
+        String seleccion= JOptionPane.showInputDialog("1.- Menu Pricipal 2.- Atencion al cliente 3.- Acerca de Nosotros 4.- Administracion 5.- Salir");
         int numero;
         numero=Integer.parseInt(seleccion);
-        switch (numero){
+        switch (numero)
+        {
             case 1:
                 Menu_Games FIDE4=new Menu_Games();
                 break;
             case 2:
-                Administracion FIDE2=new Administracion();
-                break;
-            case 3:
                 Atencion_Cliente FIDE5= new Atencion_Cliente();
                 break;
-            case 4:
+            case 3:
                 Nosotros FIDE6= new Nosotros();
                 break;
-            default:
+            case 4:
+                Administracion FIDE7= new Administracion();
+                break;
+                default:
         }
-    }
+        }
+    
     
 }
