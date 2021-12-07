@@ -46,6 +46,9 @@ public class Administracion
                 FIDE10.ListaJuegos();
                 FIDE10.Escribir("Administrar juegos.txt");//seLlmaUnArchivoPlanoParaFacilitarLaLecturaDeLosJuegos
                 break;
+            case 3:
+                Archivos_Planos FIDE8= new Archivos_Planos();
+                FIDE8.Leer("Reclamo o Consulta.txt");
             case 4:
                 salir=true; //seCierraElCicloDelMenuAlSeleccionarLaOpcion4
                 break;

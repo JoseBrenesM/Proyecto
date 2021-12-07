@@ -103,7 +103,7 @@ public class Archivos_Planos
             String linea;
             while((linea=br.readLine())!=null)
             {
-                JOptionPane.showMessageDialog(null,linea);
+                System.out.println(linea);
             }
             br.close();
             fr.close();

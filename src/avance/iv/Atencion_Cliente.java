@@ -1,6 +1,10 @@
 
 package avance.iv;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import javax.swing.JOptionPane;
 
 public class Atencion_Cliente
@@ -11,13 +15,14 @@ public class Atencion_Cliente
     private String Correo;
     private String Nombre;
     private String Motivo;
+    boolean menu=false;
     
     //seCreaUnMetodo
     public Atencion_Cliente()
     {
         JOptionPane.showMessageDialog(null,"Servicio de Atencion al Cliente. ");
         JOptionPane.showMessageDialog(null,">>>>>>>>>>> ");
-        
+        while(!menu){
         OpcionAC=Integer.parseInt(JOptionPane.showInputDialog("1.- Formulario de Reclamos y Consultas 2.- Salir "));//seSolicitaAlUsuarioLocpcionQueDeseaYseProcedeASolicitarDatos
         
         switch(OpcionAC)
@@ -28,13 +33,27 @@ public class Atencion_Cliente
                 Correo=JOptionPane.showInputDialog("Ingrese su Correo Electronico");
                 Motivo=JOptionPane.showInputDialog("Ingrese el Motivo de su Consulta o Reclamo: ");
                 Mensaje=JOptionPane.showInputDialog("Porfavor, Ingrese la Descripcion de su Reclamo o Consulta ");
-                JOptionPane.showMessageDialog(null,"Gracias por Completar el Formulario!!!");
-                break;
+                JOptionPane.showMessageDialog(null,"Gracias por Completar el Formulario, nuestros administradores veran tu mensaje y te responderan lo mas pronto posible");
+                String datos;
+                    File archivo;
+                    FileWriter Escritura;
+                    PrintWriter Linea;
+                    archivo= new File("Reclamo o Consulta.txt"); //seCreaUnArchivoPlanoQueLeDeUnaFacturaDeLaCompraDelUsuario
+                    try {
+                        archivo.createNewFile();
+                        datos=("Cliente: "+Nombre+"\nCorreo: "+Correo+"\nSolicitud: "+Motivo+"\nDetalles del reclamo: "+Mensaje);
+                        Escritura= new FileWriter(archivo,true);
+                        Linea= new PrintWriter(Escritura);
+                        Linea.print(datos);
+                        Linea.close();
+                        Escritura.close();
+                         } catch (IOException ex) {
+                            JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex);}
+                        break;
                 
-                
-            case 2: //seCierraelSwitch
-                
-                break;
+            case 2:
+                menu=true;
+                break;} //seCierraelSwitch
                 
         }
 
