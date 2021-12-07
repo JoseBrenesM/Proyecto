@@ -11,8 +11,9 @@ import javax.swing.JOptionPane;
 public class ListaJuegos 
         
 {
+    //seCreanLosAtributosQueUsaraLaClase
     public Integer id;
-    public static Integer autoIncrement=3;
+    public static Integer autoIncrement=3;//seCreaUnaVariableQueAumenteLaIdDeLosJuegos
     String[] cantidad;
     String[] juego;
     String[] precio;
@@ -22,12 +23,13 @@ public class ListaJuegos
         this.id= autoIncrement;
         autoIncrement ++;
         int Juegos=1;
+        //seCreaUnArreglo
         juego= new String[Juegos];
         cantidad= new String[Juegos];
         precio= new String[Juegos];
         plataforma=new String[Juegos];
         for(int FILAS=0; FILAS<juego.length;FILAS++)
-        {
+        {   //seSolicitanLosDatosParaLlenarElArreglo
             juego[FILAS]=JOptionPane.showInputDialog("Ingrese el nombre del juego que quiera agregar");
             cantidad[FILAS]=JOptionPane.showInputDialog("Ingrese la cantidad de copias disponibles");
             precio[FILAS]=JOptionPane.showInputDialog("Ingrese el precio por unidad del juego");
@@ -36,17 +38,17 @@ public class ListaJuegos
                
         for(int FILAS=0; FILAS<juego.length;FILAS++)
         {
-            JOptionPane.showMessageDialog(null,juego[FILAS]+" *ID "+id +"*"+" Unidades Disp: "+cantidad[FILAS]+", Precio Unidad: "+precio[FILAS]+", Plataformas: " +plataforma[FILAS]);
+            //mostramosLaInformacionIngresadaAnteriormente
+            JOptionPane.showMessageDialog(null,juego[FILAS]+" *ID "+id +"*"+" Unidades Disp: "+cantidad[FILAS]+", Precio Unidad: "+precio[FILAS]+", Plataformas: " +plataforma[FILAS]); 
                     
                 
         }
-        System.out.println();         
-                     
-                
+        System.out.println();                   
     }
    
     public void Escribir(String nombre)
     {
+        //creamosUnMetodoParaEscribirLosDatosDentroDeUnArchivoPlano
         String datos;
         File archivo;
         FileWriter Escritura;
@@ -66,11 +68,12 @@ public class ListaJuegos
                 
                 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex);
+                JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex);//mensajeEnCasoDeError
             }
         }
         else
         {
+            //creamosElElseEnCasoDeQueElArchivoYaEsteCreadoSeEscribaSobreElYNoSeCreeUnoNuevo
           try {
                 datos=("\n"+Arrays.toString(juego)+" *ID "+id+"*"+", Unidades Disp: "+Arrays.toString(cantidad)+", Precio Unidad: "+Arrays.toString(precio)+ ", Plataformas: "+Arrays.toString(plataforma));
                 Escritura= new FileWriter(archivo,true);
@@ -81,7 +84,7 @@ public class ListaJuegos
                 
                 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex);
+                JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex); //mensajeEnCasoDeError
             }  
         }
     }

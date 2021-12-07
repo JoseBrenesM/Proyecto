@@ -4,17 +4,17 @@ package avance.iv;
 import javax.swing.JOptionPane;
 
 public class Inicio_Sesion 
-{
-    //Atributos
+{   //creamosLosMetodosEnPrivadoParaQueNingunaClaseTengaAccesoAModificarEstosDatos
     private String Nombre;
     private String Pass;
     private String tipo;
     private String Inicio;
     private int tipoF;
+    boolean menu= false;
     
-    //Metodos
-    public Inicio_Sesion()
+    public Inicio_Sesion() //creaccionDelMetodoParaElInicioDeSession
     {
+        while(!menu){ //seCreaUnMenuParaQueElUsuarioPuedaIniciarSession
         tipo= JOptionPane.showInputDialog("Escriba '1' si quiere registrarse, o escriba '2' si quiere salir: ");
         tipoF=Integer.parseInt(tipo);
         switch (tipoF) {
@@ -22,22 +22,27 @@ public class Inicio_Sesion
                 Nombre=JOptionPane.showInputDialog("Para registrase escriba un nombre de usuario: ");
                 Pass=JOptionPane.showInputDialog("Introduzca una contraseña: ");
                 Inicio= JOptionPane.showInputDialog("Bienvenido "+ Nombre+" escriba su contraseña para iniciar sesion: ");
-                if (Pass.equals(Inicio)){
+                if (Pass.equals(Inicio)){ //seCompruebaQueLacontraseñaEstablecidaSeaLaMismaQueLaIngresada
                     JOptionPane.showMessageDialog(null,"Bienvenido "+ Nombre);
+                    menu=true;
                 }
                 else 
-                {
+                {   //damosElRespectivoErrorEnCasoDeQueEstasContraseñasNoCoincidan
                     String error="Contraseña incorrecta";
                     String titulo="Error al iniciar sesion";
                     javax.swing.JOptionPane.showMessageDialog( null,
                     "Contraseña incorrecta" );
                 }
                 break;
+            case 2:
+                menu=true;
+                default:}
+                
           
         }
         
     }
-//Get and Set de los Atributos
+    //seCreanLosRespectivosGetterYSetterParaLosAtributos
     public String getNombre() {
         return Nombre;
     }

@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 public class Archivos_Planos
 {
     
-    public void Leer(String nombreArchivo)
+    public void Leer(String nombreArchivo) //CreacionDeMetodoParaLaLecturaDeLosArchivosPlanos
     {
         File archivo;
         FileReader fr;
@@ -32,7 +32,7 @@ public class Archivos_Planos
         }
         catch(IOException e){JOptionPane.showMessageDialog(null,"Ha sucedido un error"+ e);}
     }
-    public void Escribir(String nombre)
+    public void Escribir(String nombre) //metodoParaLaLecturaDelArchivoPlanoCreado
     {
         String clien="", tele="",game="", venta="",date="";
         File archivo;
@@ -42,7 +42,7 @@ public class Archivos_Planos
         if(!archivo.exists())
         {
             try {
-                archivo.createNewFile();
+                archivo.createNewFile(); //SeCreaUnNuevoArchivoPlanoYSeProcedeASolicitarLosDatosQueLlenaranEsteArchivo
                 clien=JOptionPane.showInputDialog("Nombre del cliente");
                 tele=JOptionPane.showInputDialog("Telefono del cliente");
                 date=JOptionPane.showInputDialog("Fecha de la venta");
@@ -61,12 +61,12 @@ public class Archivos_Planos
                 
                 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex);
+                JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex); //seDaUnMensajeEnCasoDeQueLaCreacionDelArchivoNoSeEjecuteCorrectamente
             }
         }
-        else
+        else //seCreaUnElseEnCasoDequeElArchivoPlanoYaExistaSeEscribanLosDatosEnElExistenteYNoSeCreeUnoNuevo
         {
-          try {
+          try {//seVuelvenaPedirLosDatosParaLlenarElArchivo
                 clien=JOptionPane.showInputDialog("Nombre del cliente");
                 tele=JOptionPane.showInputDialog("Telefono del cliente");
                 date=JOptionPane.showInputDialog("Fecha de la venta");
@@ -85,11 +85,11 @@ public class Archivos_Planos
                 
                 
             } catch (IOException ex) {
-                JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex);
+                JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex);//seVuelveADarElMensajeEnCasoDeCualquierError
             }  
         }
     }
-    public void Leer2(String nombreArchivo)
+    public void Leer2(String nombreArchivo)//seCrraOtroMetodoDeLecturaParaElOtroArchivoPlano
     {
         File archivo;
         FileReader fr;
@@ -103,7 +103,7 @@ public class Archivos_Planos
             String linea;
             while((linea=br.readLine())!=null)
             {
-                System.out.println(linea);
+                JOptionPane.showMessageDialog(null,linea);
             }
             br.close();
             fr.close();

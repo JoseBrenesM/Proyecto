@@ -5,9 +5,10 @@ import javax.swing.JOptionPane;
 
 public class Nosotros
 {
-    public Nosotros()
+    public void Nosotros() //seCreaUnPequeñoMetodoParaDarInformacionAcercaDeLaTiendaAlUsuario
     {
-        //Mensaje para el usuario
         JOptionPane.showMessageDialog(null,"Somos una tienda online que se dedica a vender videojuegos de varias consolas en formato  digital,cualquier duda o consulta deja un mensaje en el apartado de Atencion al Cliente.");
+        
     }
+    
 }

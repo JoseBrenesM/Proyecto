@@ -6,15 +6,14 @@ import javax.swing.JOptionPane;
 public class Menu_Games 
 {
     boolean salir=false;
-    public Menu_Games()
+    public Menu_Games() //seCreaElMetodoEnElCualElUsuarioVaADecidirQueQuiereHacerEnLaTienda
     {
-        while(!salir){
+        while(!salir){//seCreaElFormatoDeLMenu
         JOptionPane.showMessageDialog(null, "Bienvenido a nuestro menu principal, por favor selecciona una opcion");
-            int Menu=Integer.parseInt(JOptionPane.showInputDialog("1.- Ver todos los juegos 2.- Comprar un juego 3.- Salir"));
-       //Switch para el Menu de Opciones
-            switch (Menu){
-            
-            case 1:
+        int Menu=Integer.parseInt(JOptionPane.showInputDialog("1.- Ver todos los juegos 2.- Comprar un juego 3.- Salir"));
+        switch (Menu){
+            //procedeARealizarLaLecrturaDeLaClaseEnFuncionALaAccionElejida
+            case 1: 
                 Archivos_Planos FIDE8= new Archivos_Planos();
                 FIDE8.Leer("Administrar juegos.txt");
                 break;
@@ -25,9 +24,9 @@ public class Menu_Games
             case 3:
                 salir=true;
                 break;
-            default:    
+                default://cerramosRlMenu
         }
+        
         }
-    }
-    
+    }    
 }

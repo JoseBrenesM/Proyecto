@@ -1,5 +1,5 @@
 /*
-Entregable IV: Estructura de Clases
+ProyectoIntroduccionAlaProgramacion
 Jose Andres Brenes Montero
 David Jesus Garcia Tencio
 Jose Dario Zuñiga Gamboa 
@@ -14,12 +14,12 @@ public class AvanceIV
     {
         
         JOptionPane.showMessageDialog(null,"Bienvenido a Juegos506 ");
-        Inicio_Sesion FIDE= new Inicio_Sesion();  
-        String seleccion= JOptionPane.showInputDialog("1.- Menu Pricipal 2.- Atencion al cliente 3.- Acerca de Nosotros 4.- Administracion 5.- Salir");
+        Inicio_Sesion FIDE= new Inicio_Sesion();  //llamamosAlaClaseEncargadaDelInicioDeSession
+        String seleccion= JOptionPane.showInputDialog("1.- Menu Pricipal 2.- Atencion al cliente 3.- Acerca de Nosotros 4.- Administracion 5.- Salir");//seSlolicitaAlUsuariolLaOpcionQueQuiereEjecutar
         int numero;
         numero=Integer.parseInt(seleccion);
         switch (numero)
-        {
+        { //seCreaUnSistemaDeMenuElCualSeEncargaraDeLlamarAlaClaseQueCorrespondaAlaAccionDeseada
             case 1:
                 Menu_Games FIDE4=new Menu_Games();
                 break;
@@ -32,7 +32,7 @@ public class AvanceIV
             case 4:
                 Administracion FIDE7= new Administracion();
                 break;
-                default:
+                default://seCierraElMenu
         }
         }
     

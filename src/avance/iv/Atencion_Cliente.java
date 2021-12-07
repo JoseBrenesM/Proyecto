@@ -5,20 +5,20 @@ import javax.swing.JOptionPane;
 
 public class Atencion_Cliente
 {
-    //Atributos
+    //seEstablecenLosAtributos
     private String Mensaje;
-    public int OpcionAC;
-    public String Correo;
-    public String Nombre;
-    public String Motivo;
+    private int OpcionAC;
+    private String Correo;
+    private String Nombre;
+    private String Motivo;
     
-    //Metodo
+    //seCreaUnMetodo
     public Atencion_Cliente()
     {
         JOptionPane.showMessageDialog(null,"Servicio de Atencion al Cliente. ");
         JOptionPane.showMessageDialog(null,">>>>>>>>>>> ");
         
-        OpcionAC=Integer.parseInt(JOptionPane.showInputDialog("1.- Formulario de Reclamos y Consultas 2.- Salir "));
+        OpcionAC=Integer.parseInt(JOptionPane.showInputDialog("1.- Formulario de Reclamos y Consultas 2.- Salir "));//seSolicitaAlUsuarioLocpcionQueDeseaYseProcedeASolicitarDatos
         
         switch(OpcionAC)
         {
@@ -32,15 +32,52 @@ public class Atencion_Cliente
                 break;
                 
                 
-            case 2: 
+            case 2: //seCierraelSwitch
                 
                 break;
                 
         }
-        
-       
-                
-        
-        
+
+    }
+
+    //seInstanciaLosGetterYSetterDeLosAtributosPrivados
+    public String getMensaje() {
+        return Mensaje;
+    }
+
+    public void setMensaje(String Mensaje) {
+        this.Mensaje = Mensaje;
+    }
+
+    public int getOpcionAC() {
+        return OpcionAC;
+    }
+
+    public void setOpcionAC(int OpcionAC) {
+        this.OpcionAC = OpcionAC;
+    }
+
+    public String getCorreo() {
+        return Correo;
+    }
+
+    public void setCorreo(String Correo) {
+        this.Correo = Correo;
+    }
+
+    public String getNombre() {
+        return Nombre;
+    }
+
+    public void setNombre(String Nombre) {
+        this.Nombre = Nombre;
+    }
+
+    public String getMotivo() {
+        return Motivo;
+    }
+
+    public void setMotivo(String Motivo) {
+        this.Motivo = Motivo;
     }
 }
