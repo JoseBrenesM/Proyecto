@@ -78,7 +78,7 @@ public class Buscar_Comprar extends ListaJuegos //seCreaUnaClaseQueSeExtiendeDeO
                         Linea.close();
                         Escritura.close();
                          } catch (IOException ex) {
-                            JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex);}
+                            JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex);} //daUnMensajeEnCasoDeError
                     menu=true;
                     break;
                 case 2:

@@ -48,7 +48,7 @@ public class Administracion
                 break;
             case 3:
                 Archivos_Planos FIDE8= new Archivos_Planos();
-                FIDE8.Leer("Reclamo o Consulta.txt");
+                FIDE8.Leer("Reclamo o Consulta.txt"); //seLlamaAlArchivoEncargafoDeLosReclamosYConsultas
             case 4:
                 salir=true; //seCierraElCicloDelMenuAlSeleccionarLaOpcion4
                 break;
