@@ -23,7 +23,7 @@ public class Atencion_Cliente
         JOptionPane.showMessageDialog(null,"Servicio de Atencion al Cliente. ");
         JOptionPane.showMessageDialog(null,">>>>>>>>>>> ");
         while(!menu){
-        OpcionAC=Integer.parseInt(JOptionPane.showInputDialog("1.- Formulario de Reclamos y Consultas 2.- Salir "));//seSolicitaAlUsuarioLocpcionQueDeseaYseProcedeASolicitarDatos
+        OpcionAC=Integer.parseInt(JOptionPane.showInputDialog("1.- Formulario de Reclamos y Consultas 2.- Volver "));//seSolicitaAlUsuarioLocpcionQueDeseaYseProcedeASolicitarDatos
         
         switch(OpcionAC)
         {

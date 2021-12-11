@@ -89,25 +89,4 @@ public class Archivos_Planos
             }  
         }
     }
-    public void Leer2(String nombreArchivo)//seCrraOtroMetodoDeLecturaParaElOtroArchivoPlano
-    {
-        File archivo;
-        FileReader fr;
-        BufferedReader br;
-        
-        try
-        {
-            archivo= new File(nombreArchivo);
-            fr= new FileReader(archivo);
-            br= new BufferedReader(fr);
-            String linea;
-            while((linea=br.readLine())!=null)
-            {
-                System.out.println(linea);
-            }
-            br.close();
-            fr.close();
-        }
-        catch(IOException e){JOptionPane.showMessageDialog(null,"Ha sucedido un error"+ e);}
-    }
 }

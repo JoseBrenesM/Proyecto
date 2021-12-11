@@ -10,7 +10,7 @@ public class Menu_Games
     {
         while(!salir){//seCreaElFormatoDeLMenu
         JOptionPane.showMessageDialog(null, "Bienvenido a nuestro menu principal, por favor selecciona una opcion");
-        int Menu=Integer.parseInt(JOptionPane.showInputDialog("1.- Ver todos los juegos 2.- Comprar un juego 3.- Salir"));
+        int Menu=Integer.parseInt(JOptionPane.showInputDialog("\n1.- Ver todos los juegos \n2.- Comprar un juego \n3.- Volver"));
         switch (Menu){
             //procedeARealizarLaLecrturaDeLaClaseEnFuncionALaAccionElejida
             case 1: 

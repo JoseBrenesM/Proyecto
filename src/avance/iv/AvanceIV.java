@@ -7,15 +7,20 @@ Jose Dario Zuñiga Gamboa
 package avance.iv;
 
 import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.CANCEL_OPTION;
+import static javax.swing.JOptionPane.NO_OPTION;
+import static javax.swing.JOptionPane.YES_OPTION;
+import static javax.swing.JOptionPane.showConfirmDialog;
 
 public class AvanceIV 
 {
     public static void main(String[] args) 
     {
-        
+        boolean menu=false;
         JOptionPane.showMessageDialog(null,"Bienvenido a Juegos506 ");
         Inicio_Sesion FIDE= new Inicio_Sesion();  //llamamosAlaClaseEncargadaDelInicioDeSession
-        String seleccion= JOptionPane.showInputDialog("1.- Menu Pricipal 2.- Atencion al cliente 3.- Acerca de Nosotros 4.- Administracion 5.- Salir");//seSlolicitaAlUsuariolLaOpcionQueQuiereEjecutar
+        while(!menu){
+        String seleccion= JOptionPane.showInputDialog("1.- Menu Pricipal \n2.- Atencion al cliente \n3.- Acerca de Nosotros \n4.- Administracion \n5.- Salir");//seSlolicitaAlUsuariolLaOpcionQueQuiereEjecutar
         int numero;
         numero=Integer.parseInt(seleccion);
         switch (numero)
@@ -28,11 +33,30 @@ public class AvanceIV
                 break;
             case 3:
                 Nosotros FIDE6= new Nosotros();
+                FIDE6.Nosotros();
                 break;
             case 4:
                 Administracion FIDE7= new Administracion();
                 break;
-                default://seCierraElMenu
+            case 5:
+               int salida;
+                salida = showConfirmDialog( null, "Estas seguro que quieres Salir?"); 
+                switch(salida)
+                { //seLePreguntaAlUsuarioSiQuiereSalirConUnSistemaDeSioNo
+                    case CANCEL_OPTION:  
+                         JOptionPane.showMessageDialog(null,"Volviendo al sistema");
+                         break;
+                     case NO_OPTION: //enCasoDeMarcarLaOpcionNoOLaOpcionCancelLoDevolveranAlMenuPrincipal
+                         JOptionPane.showMessageDialog(null,"Volviendo al sistema");
+                         break;
+                     case YES_OPTION: 
+                         JOptionPane.showMessageDialog(null,"Gracias por su visita, esperamos que vuelva pronto :) \nSaliendo...");
+                         menu=true; //seCierraElCicloySeFinalizaElPrograma
+                     
+                }
+
+            default:
+        }        
         }
         }
     

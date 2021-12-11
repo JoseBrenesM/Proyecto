@@ -10,21 +10,17 @@ public class Inicio_Sesion
     private String tipo;
     private String Inicio;
     private int tipoF;
-    boolean menu= false;
     
     public Inicio_Sesion() //creaccionDelMetodoParaElInicioDeSession
     {
-        while(!menu){ //seCreaUnMenuParaQueElUsuarioPuedaIniciarSession
-        tipo= JOptionPane.showInputDialog("Escriba '1' si quiere registrarse, o escriba '2' si quiere salir: ");
-        tipoF=Integer.parseInt(tipo);
-        switch (tipoF) {
-            case 1:
+                JOptionPane.showMessageDialog(null,"Por favor procesa a registrarse para utilizar nuestros servicios");
                 Nombre=JOptionPane.showInputDialog("Para registrase escriba un nombre de usuario: ");
                 Pass=JOptionPane.showInputDialog("Introduzca una contraseña: ");
+                JOptionPane.showMessageDialog(null,"Guardando sus datos...");
                 Inicio= JOptionPane.showInputDialog("Bienvenido "+ Nombre+" escriba su contraseña para iniciar sesion: ");
                 if (Pass.equals(Inicio)){ //seCompruebaQueLacontraseñaEstablecidaSeaLaMismaQueLaIngresada
                     JOptionPane.showMessageDialog(null,"Bienvenido "+ Nombre);
-                    menu=true;
+
                 }
                 else 
                 {   //damosElRespectivoErrorEnCasoDeQueEstasContraseñasNoCoincidan
@@ -32,14 +28,8 @@ public class Inicio_Sesion
                     String titulo="Error al iniciar sesion";
                     javax.swing.JOptionPane.showMessageDialog( null,
                     "Contraseña incorrecta" );
+                    JOptionPane.showInputDialog("Bienvenido "+ Nombre+" escriba su contraseña para iniciar sesion: ");
                 }
-                break;
-            case 2:
-                menu=true;
-                default:}
-                
-          
-        }
         
     }
     //seCreanLosRespectivosGetterYSetterParaLosAtributos

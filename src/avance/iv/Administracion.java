@@ -17,7 +17,7 @@ public class Administracion
     if (opcion.equals(contra))
     {   
         while (!salir){ //seCreaUnCicloEnElMenuParaQueEsteNoseSalgaSinoSeSeleccionaLaOpcion4
-        int admin=Integer.parseInt(JOptionPane.showInputDialog("1.- Administrar ventas 2.- Agregar nuevo juego al stock 3.- Ver reclamos y sugerencias 4.-Salir"));
+        int admin=Integer.parseInt(JOptionPane.showInputDialog("1.- Administrar ventas 2.- Agregar nuevo juego al stock 3.- Ver reclamos y sugerencias 4.-Volver"));
         switch (admin)
         {
             case 1:
@@ -32,7 +32,7 @@ public class Administracion
                         break;
                     case 2:
                         Archivos_Planos FIDE15= new Archivos_Planos();
-                        FIDE15.Leer2("Administrar ventas.txt");//seProcedeALeerEsteArchivoPlanol
+                        FIDE15.Leer("Administrar ventas.txt");//seProcedeALeerEsteArchivoPlano
                         break;
                     case 3:
                         salir2=true;
