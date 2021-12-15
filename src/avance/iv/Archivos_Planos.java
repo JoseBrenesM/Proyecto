@@ -82,8 +82,6 @@ public class Archivos_Planos
                 Linea.println("Unidades vendidas: "+venta+"\n");
                 Linea.close();
                 Escritura.close();
-                
-                
             } catch (IOException ex) {
                 JOptionPane.showMessageDialog(null, "Ha ocurrido un error"+ex);//seVuelveADarElMensajeEnCasoDeCualquierError
             }  

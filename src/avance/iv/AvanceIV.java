@@ -51,14 +51,10 @@ public class AvanceIV
                          break;
                      case YES_OPTION: 
                          JOptionPane.showMessageDialog(null,"Gracias por su visita, esperamos que vuelva pronto :) \nSaliendo...");
-                         menu=true; //seCierraElCicloySeFinalizaElPrograma
-                     
+                         menu=true; //seCierraElCicloySeFinalizaElPrograma 
                 }
-
             default:
         }        
         }
         }
-    
-    
 }

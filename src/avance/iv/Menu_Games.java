@@ -1,4 +1,3 @@
-
 package avance.iv;
 
 import javax.swing.JOptionPane;
@@ -24,7 +23,7 @@ public class Menu_Games
             case 3:
                 salir=true;
                 break;
-                default://cerramosRlMenu
+                default://cerramosElMenu
         }
         
         }

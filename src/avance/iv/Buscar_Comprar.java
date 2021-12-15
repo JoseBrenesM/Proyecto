@@ -238,7 +238,7 @@ public class Buscar_Comprar extends ListaJuegos //seCreaUnaClaseQueSeExtiendeDeO
                     menu=true;
                     break;
                     }
-                }
+                }           
                     
                 case NO_OPTION:
                     menu=true;

@@ -10,7 +10,7 @@ public class Administracion
     String[] precio;
     String [] plataforma;
     boolean salir=false;
-    public Administracion() //creaccionDelMetodo
+    public Administracion() //creaccionDelMetodo    
     {
     String contra= "506_admin"; //contraseñaParaAccederaAdministracion
     String opcion=JOptionPane.showInputDialog("Para acceder a la administracion digite la contraseña");

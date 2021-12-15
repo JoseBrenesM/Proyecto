@@ -4,7 +4,7 @@ package avance.iv;
 import javax.swing.JOptionPane;
 
 public class Inicio_Sesion 
-{   //creamosLosMetodosEnPrivadoParaQueNingunaClaseTengaAccesoAModificarEstosDatos
+{   //creamosLosAtributosEnPrivadoParaQueNingunaClaseTengaAccesoAModificarEstosDatos
     private String Nombre;
     private String Pass;
     private String tipo;

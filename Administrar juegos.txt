@@ -1,2 +1,4 @@
 [GTA V] *ID 1*, Unidades Disp [100], Precio Unidad [23000], Plataformas [PC, PS4,PS5]
 [Mario Kart] *ID 2*, Unidades Disp: [25], Precio Unidad: [18000], Plataformas: [Nintendo Switch]
+[Spiderman] *ID 3*, Unidades Disp: [50], Precio Unidad: [28000], Plataformas: [PS4 PS5]
+[Resident Evil VII] *ID 4*, Unidades Disp: [21], Precio Unidad: [23000], Plataformas: [PS4,PS5 PC]

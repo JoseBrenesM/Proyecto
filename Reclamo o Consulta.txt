@@ -1,0 +1,4 @@
+Cliente: David 
+Correo: david@gmail.com
+Solicitud: Devolucion
+Detalles del reclamo: No quede satisfecho con el juego
